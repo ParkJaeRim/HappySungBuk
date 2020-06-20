@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="near"> <!-- mybatis는 namespace필수!! -->
+
+	<select id="AllSchool" resultType="school"> <!-- resultType속성 필수!! -->
+		SELECT *
+		FROM school
+	</select>
+
+	<select id="AllElementry" resultType="school"> <!-- resultType속성 필수!! -->
+		SELECT *
+		FROM school where type like "%초등학교%"
+	</select>
+
+	<select id="AllMiddle" resultType="school"> <!-- resultType속성 필수!! -->
+		SELECT *
+		FROM school where type like "%중학교%"
+	</select>
+
+	<select id="AllHigh" resultType="school"> <!-- resultType속성 필수!! -->
+		SELECT *
+		FROM school where type like "%고등학교%"
+	</select>
+	
+	<select id="AllPharm" resultType="pharmacy"> <!-- resultType속성 필수!! -->
+		SELECT *
+		FROM pharmacy
+	</select>
+</mapper>  

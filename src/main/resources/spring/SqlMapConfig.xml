@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<!-- Type Alias 등록 하세요 -->
+		<typeAlias type="com.ssafy.myapp.dto.HouseDeal"
+			alias="house" />
+		<typeAlias type="com.ssafy.myapp.dto.MemberInfo"
+			alias="memberinfo" />
+		<typeAlias type="com.ssafy.myapp.dto.HousePageBean"
+			alias="housepagebean" />
+		<typeAlias type="com.ssafy.myapp.dto.PharmacyInfo"
+			alias="pharmacy" />
+		<typeAlias type="com.ssafy.myapp.dto.School" alias="school" />
+	</typeAliases>
+	<mappers>
+	</mappers>
+</configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
