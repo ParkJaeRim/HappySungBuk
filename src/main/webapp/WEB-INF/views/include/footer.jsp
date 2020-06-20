@@ -125,7 +125,7 @@ h6 {
 					<ul>
 						<li><a class="email" href="#"> insert email here </a></li>
 						<li>
-							<p>ParkJaeRim.github.com</p>
+							<p><a href="https://github.com/ParkJaeRim">github.com/ParkJaeRim</a></p>
 						</li>
 					</ul>
 				</div>
@@ -133,7 +133,7 @@ h6 {
 					<ul>
 						<li>
 							<h5>
-								<a href="#" style="margin-top: 5em">대전 6반 짱</a>
+								<a href="#" style="margin-top: 5em"> </a>
 							</h5>
 						</li>
 						<li>
