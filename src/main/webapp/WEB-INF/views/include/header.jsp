@@ -79,16 +79,6 @@ a, .sub {
 	overflow: hidden;
 }
 
-.sub {
-	float: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 30px;
-	padding-right: 30px;
-	font-size: 17px;
-	font-weight: 500;
-}
-
 .MainMenu a {
 	color: black;
 }
@@ -112,13 +102,13 @@ ul {
 
 .nav1 {
 	width: 600px;
-	margin-left: 300px;
+	margin-left: 380px;
 	font-weight: bold;
 }
 
 .nav2 {
 	width: 600px;
-	margin-left: 420px;
+	margin-left: 520px;
 	font-weight: bold;
 }
 
