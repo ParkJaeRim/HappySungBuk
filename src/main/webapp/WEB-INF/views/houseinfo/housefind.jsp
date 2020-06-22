@@ -33,7 +33,7 @@
 }
 
 #backbtn {
-	float: right;
+	/* 	float: right; */
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
@@ -73,13 +73,15 @@ img {
 
 		<!-- map start -->
 		<c:if test="${findhouse != null}">
-			<div id="map" style="height: 500px; width: 100%;"></div>
+			<div id="map" style="height: 500px; width: 45%;"></div>
+			<div
+				style="height: 500px; width: 45%; float: right; margin-top: 15px;">
+				<img src="${root}/resources/img/${findhouse.aptName}.jpg"
+					onerror="this.src='${root}/resources/img/대체이미지.jpg'"
+					style="width: 100%; height: 500px;">
+			</div>
 			<div style="width: 100%;">
-				<div>
-					<img src="${root}/resources/img/${findhouse.aptName}.jpg"
-						onerror="this.src='${root}/resources/img/대체이미지.jpg'"
-						style="width: 100%; height: 500px;">
-				</div>
+
 				<div>
 					<table style="width: 100%; height: 100px; margin-top: 15px;">
 						<tbody align="center">
@@ -116,7 +118,8 @@ img {
 			<input type="hidden" id="lng" name="lng" value="${findhouse.lng}">
 		</c:if>
 
-		<table id="recommendResult" style="visibility: visible; width: 100%;">
+		<table id="recommendResult"
+			style="visibility: visible; width: 70%; font-size: 11pt;">
 			<thead>
 				<tr class="table-warning" style="text-align: center; height: 40px;">
 					<th>No.</th>
@@ -140,7 +143,7 @@ img {
 							<td name="no" value="${re.no}">${re.no}</td>
 							<td><img src="${root}/resources/img/${re.aptName}.jpg"
 								onerror="this.src='${root}/resources/img/대체이미지.jpg'"
-								style="width: 300px; height: 300px;"></td>
+								style="width: 150px; height: 150px;"></td>
 							<td name="dong">${re.dong}</td>
 							<td name="aptName">${re.aptName}</td>
 							<td name="area">${re.area}</td>
@@ -156,15 +159,10 @@ img {
 			<div>
 				<button type="text" class="btn btn-secondary" id="recommendBtn"
 					onclick="goRecom()">추천목록 숨기기</button>
-			</div>
-
-			<div>
 				<button type="button" class="btn btn-secondary" id="backbtn"
 					onclick="javascript:backtoHouseList();">뒤로가기</button>
 			</div>
-
 		</table>
-
 	</div>
 	<script type="text/javascript"
 		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d5e6e1f1140f3ded1483ff360cb5a153"></script>

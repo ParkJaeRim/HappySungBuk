@@ -194,8 +194,6 @@ ul {
 			<li class="nav-item"><a class="nav-link"
 				href="${root }/crawling">실시간 뉴스</a></li>
 			<li class="nav-item"><a class="nav-link"
-				href="http://localhost:9999/happyhouse/">질문 게시판</a></li>
-			<li class="nav-item"><a class="nav-link"
 				href="${root }/boardMain/">게시판</a></li>
 		</ul>
 	</div>
@@ -246,8 +244,6 @@ ul {
 	</div>
 	<div class="mainmenu">
 		<ul class="nav2 nav-pills">
-			<li class="nav-item"><a class="nav-link"
-				href="http://localhost:9999/happyhouse/">질문 게시판</a></li>
 			<li class="nav-item dropdown"><a
 				class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"
 				role="button" aria-haspopup="true" aria-expanded="false">주변탐방</a>
@@ -261,6 +257,8 @@ ul {
 				href="${root }/crawling">실시간 뉴스</a></li>
 			<li class="nav-item"><a class="nav-link"
 				href="javascript:goList();" id="searchDeal">실거래가 조회</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="${root }/boardMain/">게시판</a></li>
 		</ul>
 	</div>
 </c:if>
