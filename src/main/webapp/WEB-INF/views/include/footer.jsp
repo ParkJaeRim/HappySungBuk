@@ -123,7 +123,7 @@ h6 {
 				<div class="col-lg-3 col-sm-2 col-xs-3">
 					<h3>Contact</h3>
 					<ul>
-						<li><a class="email" href="#"> insert email here </a></li>
+						<li><a class="email" href="#"> inser	t email here </a></li>
 						<li>
 							<p><a href="https://github.com/ParkJaeRim">github.com/ParkJaeRim</a></p>
 						</li>
@@ -143,7 +143,7 @@ h6 {
 						</li>
 						<li>
 							<h5>
-								<a href="http://localhost:9999/happyhouse/"> 질문 게시판 </a>
+								<a href="#"> 질문 게시판 </a>
 							</h5>
 						</li>
 						<li>

@@ -1,8 +1,6 @@
 package com.ssafy.myapp.dto;
 
-import java.io.Serializable;
-
-public class MemberInfo implements Serializable {
+public class MemberInfo  {
 
 	/** 아이디 */
 	private String id;

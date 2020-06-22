@@ -13,6 +13,7 @@
 		<typeAlias type="com.ssafy.myapp.dto.PharmacyInfo"
 			alias="pharmacy" />
 		<typeAlias type="com.ssafy.myapp.dto.School" alias="school" />
+		<typeAlias type="com.ssafy.myapp.dto.Board" alias="board" />
 	</typeAliases>
 	<mappers>
 	</mappers>

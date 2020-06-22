@@ -40,6 +40,7 @@
 				<value>classpath:spring/login.xml</value>
 				<value>classpath:spring/pharmacy.xml</value>
 				<value>classpath:spring/near.xml</value>
+				<value>classpath:spring/board.xml</value>
 			</list>
 		</property>
 	</bean>

@@ -1,8 +1,6 @@
 package com.ssafy.myapp.dto;
 
-import java.io.Serializable;
-
-public class HouseDeal implements Serializable {
+public class HouseDeal  {
 
 	private int no;
 	private String dong;

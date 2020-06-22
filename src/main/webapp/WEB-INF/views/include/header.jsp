@@ -102,13 +102,13 @@ ul {
 
 .nav1 {
 	width: 600px;
-	margin-left: 380px;
+	margin-left: 370px;
 	font-weight: bold;
 }
 
 .nav2 {
 	width: 600px;
-	margin-left: 520px;
+	margin-left: 450px;
 	font-weight: bold;
 }
 
@@ -195,6 +195,8 @@ ul {
 				href="${root }/crawling">실시간 뉴스</a></li>
 			<li class="nav-item"><a class="nav-link"
 				href="http://localhost:9999/happyhouse/">질문 게시판</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="${root }/boardMain/">게시판</a></li>
 		</ul>
 	</div>
 </c:if>

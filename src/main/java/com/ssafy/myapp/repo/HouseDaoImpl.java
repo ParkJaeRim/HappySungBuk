@@ -81,7 +81,6 @@ public class HouseDaoImpl implements HouseDao {
 
 	@Override
 	public int getTotalCount(HousePageBean bean) throws SQLException {
-		int cnt = 0;
 		String dong = bean.getDong();
 		String aptName = bean.getAptname();
 		if (dong != null) {
@@ -97,13 +96,13 @@ public class HouseDaoImpl implements HouseDao {
 
 	@Override
 	public List<HouseDeal> searchSimilar(HouseDeal hd) throws SQLException {
-		return sqlSession.selectList(ns +"searchSimilar",hd);
+		return sqlSession.selectList(ns + "searchSimilar", hd);
 	}
-	
+
 	//
 	@Override
-	   public List<PharmacyInfo> searchPharmacy(String dong) throws SQLException {
-	      return sqlSession.selectList("pharmacy.pharmacyAtDong", dong);
-	   }
+	public List<PharmacyInfo> searchPharmacy(String dong) throws SQLException {
+		return sqlSession.selectList("pharmacy.pharmacyAtDong", dong);
+	}
 
 }

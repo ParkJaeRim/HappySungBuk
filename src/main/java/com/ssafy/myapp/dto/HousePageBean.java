@@ -1,9 +1,8 @@
 package com.ssafy.myapp.dto;
 
-import java.io.Serializable;
 import java.util.Arrays;
 
-public class HousePageBean implements Serializable {
+public class HousePageBean{
 	private String dongkey;
 
 	private int currentpage;
