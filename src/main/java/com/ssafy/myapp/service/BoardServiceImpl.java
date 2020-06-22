@@ -23,4 +23,9 @@ public class BoardServiceImpl implements BoardService {
 
 	}
 
+	@Override
+	public Board boardDetail(int no) {
+		return boardDao.boardDeatil(no);
+	}
+
 }

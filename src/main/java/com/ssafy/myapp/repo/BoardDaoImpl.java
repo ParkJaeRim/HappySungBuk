@@ -20,4 +20,9 @@ public class BoardDaoImpl implements BoardDao {
 	public List<Board> searchAll(Board board) throws SQLException {
 		return sqlSession.selectList(ns + "SearchallArticle", board);
 	}
+
+	@Override
+	public Board boardDeatil(int no) {
+		return sqlSession.selectOne(ns + "detail", no);
+	}
 }

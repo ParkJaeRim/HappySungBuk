@@ -9,4 +9,6 @@ public interface BoardDao {
 
 	public List<Board> searchAll(Board board) throws SQLException;
 
+	public Board boardDeatil(int no);
+
 }

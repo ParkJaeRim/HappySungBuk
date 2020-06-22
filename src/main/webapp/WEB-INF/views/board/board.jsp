@@ -29,17 +29,24 @@ table {
 						<td>아이디</td>
 						<td>제목</td>
 						<td>날짜</td>
+						<td>상세정보</td>
 					</tr>
 				</thead>
 				<c:forEach items="${allArticle }" var="article">
-					<tbody>
+					<form id="detailform" method="post" class="form-inline"
+						action="${root }/articledetail/${article.no}">
+						<input type="hidden" id="dealAmount" name="dealAmount"
+							value="${article.content}">
 						<tr>
-							<td>${article.no}</td>
-							<td>${article.id}</td>
-							<td><a href="${root}/articledetail}">${article.title}</a></td>
-							<td>${article.dates}</td>
+							<td name="no" value="${article.no}">${article.no}</td>
+							<td name="id">${article.id}</td>
+							<td name="title">${article.title}</td>
+							<td name="dates">${article.dates}</td>
+							<td>
+								<button type="submit" class="btn btn-warning">상세정보</button>
+							</td>
 						</tr>
-					</tbody>
+					</form>
 				</c:forEach>
 			</table>
 		</c:if>

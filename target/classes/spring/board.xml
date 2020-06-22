@@ -9,4 +9,8 @@
 		SELECT *
 		from board
 	</select>
+
+	<select id="detail" resultType="board">
+		select * from board where no=#{no}
+	</select>
 </mapper>  

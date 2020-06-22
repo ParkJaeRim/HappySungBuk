@@ -9,4 +9,6 @@ public interface BoardService {
 
 	List<Board> searchAll(Board board) throws SQLException;
 
+	Board boardDetail(int no);
+
 }
