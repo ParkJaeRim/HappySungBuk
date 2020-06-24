@@ -90,8 +90,6 @@ public class HouseController {
 	// no에 따른 houdsedetail 페이지 보여줌
 	@RequestMapping(value = "/housedetail/{no}")
 	public String detail(@PathVariable int no, String dealAmount, String area, Model model) throws SQLException {
-		logger.info("houseDetail! " + new Date());
-		System.out.println(area + " " + dealAmount + " " + no);
 		model.addAttribute("findhouse", houseService.houseDetail(no));
 		HouseDeal hd = new HouseDeal();
 		hd.setDealAmount(dealAmount);
@@ -127,5 +125,5 @@ public class HouseController {
 		model.addAttribute("findhouse", houseService.searchDongAndApt(key, word, word2));
 		// key는 동을 검색하는지 / 전체 검색을 하는지 , word는 검색 키워드, word2는 동이름
 		return "houseinfo/houseinfo";
-	}	
+	}
 }

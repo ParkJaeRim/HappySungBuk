@@ -11,4 +11,6 @@ public interface BoardService {
 
 	Board boardDetail(int no);
 
+	void updates(Board board);
+
 }

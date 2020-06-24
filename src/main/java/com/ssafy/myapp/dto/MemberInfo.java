@@ -1,6 +1,6 @@
 package com.ssafy.myapp.dto;
 
-public class MemberInfo  {
+public class MemberInfo {
 
 	/** 아이디 */
 	private String id;

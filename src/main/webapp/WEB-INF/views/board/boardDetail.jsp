@@ -20,34 +20,45 @@ table {
 
 
 <body>
-<!-- ${login}넘어오는거 확인함 이제 수정 버튼 생성해서 수정하는 기능 생성하기 -->
+	<!-- ${login}넘어오는거 확인함 이제 수정 버튼 생성해서 수정하는 기능 생성하기 -->
 	<div>
 		<c:if test="${detail != null}">
-			<table>
-				<tr>
-					<td>NO</td>
-					<td>${detail.no}</td>
-				</tr>
-				<tr>
-					<td>아이디</td>
-					<td>${detail.id}</td>
-				</tr>
-				<tr>
-					<td>제목</td>
-					<td>${detail.title}</td>
+			<form id="detailform" method="POST" class="form-inline"
+				action="${root }/goModify/${detail.no}">
+				<input type="hidden" id="articleid" name="articleid"
+					value="${detail.id}"> <input type="hidden" id="loginid"
+					name="loginid" value="${login.id}">
+				<table>
+					<tr>
+						<td>NO</td>
+						<td name="no" value="${detail.no}">${detail.no}</td>
+					</tr>
+					<tr>
+						<td>아이디</td>
+						<td name="id" value="id">${detail.id}</td>
+					</tr>
+					<tr>
+						<td>제목</td>
+						<td name="title">${detail.title}</td>
 
-				</tr>
-				<tr>
-					<td>내용</td>
-					<td>${detail.content}</td>
+					</tr>
+					<tr>
+						<td>내용</td>
+						<td name="content">${detail.content}</td>
 
-				</tr>
-				<tr>
-					<td>날짜</td>
-					<td>${detail.dates}</td>
+					</tr>
+					<tr>
+						<td>날짜</td>
+						<td name="dates">${detail.dates}</td>
 
-				</tr>
-			</table>
+					</tr>
+					<tr>
+						<td>
+							<button type="submit" class="btn btn-warning">수정</button>
+						</td>
+					</tr>
+				</table>
+			</form>
 		</c:if>
 	</div>
 </body>

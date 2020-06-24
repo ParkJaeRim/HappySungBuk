@@ -25,4 +25,10 @@ public class BoardDaoImpl implements BoardDao {
 	public Board boardDeatil(int no) {
 		return sqlSession.selectOne(ns + "detail", no);
 	}
+
+	@Override
+	public void updates(Board board) {
+		sqlSession.selectOne(ns + "updateArticle", board);
+	}
+
 }

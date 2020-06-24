@@ -28,4 +28,9 @@ public class BoardServiceImpl implements BoardService {
 		return boardDao.boardDeatil(no);
 	}
 
+	@Override
+	public void updates(Board board) {
+		boardDao.updates(board);
+	}
+
 }

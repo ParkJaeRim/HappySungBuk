@@ -9,6 +9,12 @@
 <meta charset="UTF-8">
 <title>게시판</title>
 <%@ include file="../include/header.jsp"%>
+<script type="text/javascript">
+	function modify() {
+		document.detailform.action = "${root}/goModify";
+		document.detailform.submit();
+	}
+</script>
 <style>
 table {
 	align: center;
@@ -35,7 +41,7 @@ table {
 				<c:forEach items="${allArticle }" var="article">
 					<form id="detailform" method="post" class="form-inline"
 						action="${root }/articledetail/${article.no}">
-						<input type="hidden" id="dealAmount" name="dealAmount"
+						<input type="hidden" id="content" name="content"
 							value="${article.content}">
 						<tr>
 							<td name="no" value="${article.no}">${article.no}</td>

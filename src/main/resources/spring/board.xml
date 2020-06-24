@@ -11,6 +11,14 @@
 	</select>
 
 	<select id="detail" resultType="board">
-		select * from board where no=#{no}
+		select * from board where
+		no=#{no}
 	</select>
+
+	<update id="updateArticle" parameterType="board">
+		UPDATE board
+		set
+		title=
+		#{title}, content= #{content} where id=#{id} and no=#{no}
+	</update>
 </mapper>  

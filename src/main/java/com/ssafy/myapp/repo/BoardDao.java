@@ -11,4 +11,6 @@ public interface BoardDao {
 
 	public Board boardDeatil(int no);
 
+	public void updates(Board board);
+
 }

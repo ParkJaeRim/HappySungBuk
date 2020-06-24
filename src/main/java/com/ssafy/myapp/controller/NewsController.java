@@ -1,8 +1,11 @@
 package com.ssafy.myapp.controller;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -14,8 +17,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import java.util.*;
-import java.text.*;
 
 @Controller
 public class NewsController {
@@ -66,4 +67,5 @@ public class NewsController {
 		model.addAttribute("titles", al2);
 		return "news/news";
 	}
+	
 }

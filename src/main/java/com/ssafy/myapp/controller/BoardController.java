@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,5 +30,24 @@ public class BoardController {
 	public String detail(@PathVariable int no, Model model) throws SQLException {
 		model.addAttribute("detail", boardService.boardDetail(no));
 		return "board/boardDetail";
+	}
+
+	@RequestMapping(value = "/goModify/{no}", method = RequestMethod.POST)
+	public String modify(@PathVariable int no, String loginid, String articleid, Model model) {
+
+		if (loginid.equals(articleid)) {
+			model.addAttribute("detail", boardService.boardDetail(no));
+			return "board/boardModify";
+		} else {
+			return "redirect:/articledetail/{no}";
+		}
+	}
+
+	@RequestMapping(value = "/updated", method = RequestMethod.POST)
+	public String update(@ModelAttribute Board board) throws SQLException {
+		System.out.println(board.getNo());
+		System.out.println(board.getTitle());
+		boardService.updates(board);
+		return "redirect:/boardMain";
 	}
 }
