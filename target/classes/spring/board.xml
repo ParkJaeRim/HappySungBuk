@@ -21,4 +21,16 @@
 		title=
 		#{title}, content= #{content} where id=#{id} and no=#{no}
 	</update>
+
+	<insert id="createArticle" parameterType="board">
+		insert into board
+		(no,
+		id, title, content, dates)
+		values (#{no},#{id},#{title}, #{content},
+		#{dates});
+	</insert>
+
+	<select id="count" resultType="int">
+		select count(*) from board
+	</select>
 </mapper>  

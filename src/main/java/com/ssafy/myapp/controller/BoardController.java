@@ -1,6 +1,10 @@
 package com.ssafy.myapp.controller;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -48,6 +52,22 @@ public class BoardController {
 		System.out.println(board.getNo());
 		System.out.println(board.getTitle());
 		boardService.updates(board);
+		return "redirect:/boardMain";
+	}
+
+	@RequestMapping(value = "/goCreate")
+	public String goCreate() {
+		return "board/boardCreate";
+	}
+
+	@RequestMapping(value = "/create", method = RequestMethod.POST)
+	public String created(@ModelAttribute Board board) throws SQLException {
+		int no = boardService.countArticle();
+		board.setNo(no + 1);
+		System.out.println(no + 1);
+		// 날짜 포맷팅 해야함.
+		boardService.create(board);
+
 		return "redirect:/boardMain";
 	}
 }

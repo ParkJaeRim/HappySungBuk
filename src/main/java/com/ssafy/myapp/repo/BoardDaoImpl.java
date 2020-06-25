@@ -31,4 +31,15 @@ public class BoardDaoImpl implements BoardDao {
 		sqlSession.selectOne(ns + "updateArticle", board);
 	}
 
+	@Override
+	public void create(Board board) {
+		sqlSession.selectOne(ns + "createArticle", board);
+
+	}
+
+	@Override
+	public int countArticle() {
+		return sqlSession.selectOne(ns + "count");
+	}
+
 }

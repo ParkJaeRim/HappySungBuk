@@ -33,4 +33,15 @@ public class BoardServiceImpl implements BoardService {
 		boardDao.updates(board);
 	}
 
+	@Override
+	public void create(Board board) {
+		boardDao.create(board);
+
+	}
+
+	@Override
+	public int countArticle() {
+		return boardDao.countArticle();
+	}
+
 }

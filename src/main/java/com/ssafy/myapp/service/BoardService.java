@@ -13,4 +13,8 @@ public interface BoardService {
 
 	void updates(Board board);
 
+	void create(Board board);
+
+	int countArticle();
+
 }

@@ -16,6 +16,7 @@ table {
 	text-align: center;
 }
 </style>
+
 </head>
 
 
@@ -51,6 +52,7 @@ table {
 				</table>
 			</form>
 		</c:if>
+
 	</div>
 </body>
 

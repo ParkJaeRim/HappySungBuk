@@ -13,4 +13,8 @@ public interface BoardDao {
 
 	public void updates(Board board);
 
+	public void create(Board board);
+
+	public int countArticle();
+
 }
