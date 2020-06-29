@@ -25,10 +25,16 @@
 	<insert id="createArticle" parameterType="board">
 		insert into board
 		(no,
-		id, title, content, dates)
+		id, title, content, date)
 		values (#{no},#{id},#{title}, #{content},
-		#{dates});
+		now());
 	</insert>
+	
+	<select id="getTime" resultType="string">
+
+		select now()
+
+	</select>
 
 	<select id="count" resultType="int">
 		select count(*) from board

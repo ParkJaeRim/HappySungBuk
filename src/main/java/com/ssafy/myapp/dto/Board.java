@@ -1,6 +1,9 @@
 package com.ssafy.myapp.dto;
 
-public class Board  {
+import java.sql.Timestamp;
+import java.util.Date;
+
+public class Board {
 
 	private int no;
 	/** 아이디 */
@@ -10,7 +13,24 @@ public class Board  {
 	/** 주소 */
 	private String content;
 	/** 번호 */
-	private String dates;
+	private Timestamp date;
+
+	public Board(int no, String id, String title, String content, Timestamp date) {
+		super();
+		this.no = no;
+		this.id = id;
+		this.title = title;
+		this.content = content;
+		this.date = date;
+	}
+
+	public Timestamp getDate() {
+		return date;
+	}
+
+	public void setDate(Timestamp date) {
+		this.date = date;
+	}
 
 	public int getNo() {
 		return no;
@@ -44,29 +64,13 @@ public class Board  {
 		this.content = content;
 	}
 
-	public String getDates() {
-		return dates;
-	}
-
-	public void setDates(String dates) {
-		this.dates = dates;
-	}
-
-	public Board(int no, String id, String title, String content, String dates) {
-		this.no = no;
-		this.id = id;
-		this.title = title;
-		this.content = content;
-		this.dates = dates;
-	}
 
 	public Board() {
 	}
 
 	@Override
 	public String toString() {
-		return "Board [no=" + no + ", id=" + id + ", title=" + title + ", content=" + content + ", dates=" + dates
-				+ "]";
+		return "Board [no=" + no + ", id=" + id + ", title=" + title + ", content=" + content + ", date=" + date + "]";
 	}
 
 }

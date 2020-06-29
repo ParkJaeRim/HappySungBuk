@@ -51,7 +51,7 @@ table {
 							<td name="no" value="${article.no}">${article.no}</td>
 							<td name="id">${article.id}</td>
 							<td name="title">${article.title}</td>
-							<td name="dates">${article.dates}</td>
+							<td name="date">${article.date}</td>
 							<td>
 								<button type="submit" class="btn btn-warning">상세정보</button>
 							</td>

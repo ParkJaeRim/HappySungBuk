@@ -49,7 +49,7 @@ table {
 					</tr>
 					<tr>
 						<td>날짜</td>
-						<td name="dates">${detail.dates}</td>
+						<td name="dates">${detail.date}</td>
 
 					</tr>
 					<tr>

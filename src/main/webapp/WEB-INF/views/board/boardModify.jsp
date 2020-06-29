@@ -26,8 +26,6 @@ table {
 			<form id="detailform" method="post" class="form-inline"
 				action="${root }/updated">
 				<input type="hidden" id="no" name="no" value="${detail.no}">
-				<input type="hidden" id="dates" name="dates"
-					value="${article.dates}">
 				<table>
 					<tr>
 						<td><label for="id">아이디</label></td>
