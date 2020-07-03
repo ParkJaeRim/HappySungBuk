@@ -2,6 +2,8 @@
 
 성북구에 대한 데이터를 활용한 웹 페이지
 
+### 환경 : Java (1.8ver.), MyBatis(MySQL(8.0.19ver.)), Spring (Using MVC pattern)
+
 
 #### 수정 예정 : Login CSS / 지도API 컨텐츠 수정
 #### 추가 예정 : 게시판 기능 / 각 페이지 로그인 라우터 관리 
