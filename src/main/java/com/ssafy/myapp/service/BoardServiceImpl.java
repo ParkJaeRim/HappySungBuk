@@ -44,4 +44,9 @@ public class BoardServiceImpl implements BoardService {
 		return boardDao.countArticle();
 	}
 
+	@Override
+	public void deleted(int no) {
+		boardDao.deleted(no);
+	}
+
 }

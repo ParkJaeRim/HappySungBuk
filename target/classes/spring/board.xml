@@ -27,9 +27,9 @@
 		(no,
 		id, title, content, date)
 		values (#{no},#{id},#{title}, #{content},
-		now());
+		now())
 	</insert>
-	
+
 	<select id="getTime" resultType="string">
 
 		select now()
@@ -39,4 +39,8 @@
 	<select id="count" resultType="int">
 		select count(*) from board
 	</select>
+
+	<delete id="deleteArticle">
+		delete from board where no=#{no}
+	</delete>
 </mapper>  

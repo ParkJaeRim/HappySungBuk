@@ -1,10 +1,6 @@
 package com.ssafy.myapp.controller;
 
 import java.sql.SQLException;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ssafy.myapp.dto.Board;
 import com.ssafy.myapp.service.BoardService;
@@ -37,13 +34,24 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/goModify/{no}", method = RequestMethod.POST)
-	public String modify(@PathVariable int no, String loginid, String articleid, Model model) {
-
-		if (loginid.equals(articleid)) {
-			model.addAttribute("detail", boardService.boardDetail(no));
-			return "board/boardModify";
+	public String modify(@PathVariable int no, String loginid, String articleid, Model model,
+			@RequestParam String handle) {
+		if (handle.equals("modify")) {
+			if (loginid.equals(articleid)) {
+				model.addAttribute("detail", boardService.boardDetail(no));
+				return "board/boardModify";
+			} else {
+				return "redirect:/articledetail/{no}";
+			}
+		} else if (handle.contentEquals("delete")) {
+			if (loginid.equals(articleid)) {
+				boardService.deleted(no);
+				return "redirect:/boardMain";
+			} else {
+				return "redirect:/articledetail/{no}";
+			}
 		} else {
-			return "redirect:/articledetail/{no}";
+			return "";
 		}
 	}
 
@@ -67,7 +75,8 @@ public class BoardController {
 		System.out.println(no + 1);
 		// 날짜 포맷팅 해야함.
 		boardService.create(board);
-
 		return "redirect:/boardMain";
+
 	}
+
 }

@@ -16,6 +16,12 @@ table {
 	text-align: center;
 }
 </style>
+<script type="text/javascript">
+	function deleteArticle() {
+		document.detailform.action = "${root}/deleteArticle/${detail.no}";
+		document.detailform.submit();
+	}
+</script>
 </head>
 
 
@@ -54,7 +60,10 @@ table {
 					</tr>
 					<tr>
 						<td>
-							<button type="submit" class="btn btn-warning">수정</button>
+							<button type="submit" name="handle" value="modify"
+								class="btn btn-warning">수정</button>
+							<button type="submit" name="handle" value="delete"
+								class="btn btn-warning">삭제</button>
 						</td>
 					</tr>
 				</table>

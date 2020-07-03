@@ -42,4 +42,9 @@ public class BoardDaoImpl implements BoardDao {
 		return sqlSession.selectOne(ns + "count");
 	}
 
+	@Override
+	public void deleted(int no) {
+		sqlSession.selectOne(ns + "deleteArticle", no);
+	}
+
 }

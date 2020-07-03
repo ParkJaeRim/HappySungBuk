@@ -9,6 +9,7 @@
 <meta charset="UTF-8">
 <title>게시판</title>
 <%@ include file="../include/header.jsp"%>
+
 <style>
 table {
 	align: center;

@@ -17,4 +17,6 @@ public interface BoardDao {
 
 	public int countArticle();
 
+	public void deleted(int no);
+
 }

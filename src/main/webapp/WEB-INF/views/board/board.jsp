@@ -16,6 +16,7 @@
 	}
 
 	function create() {
+
 		document.location.href = "${root}/goCreate"
 	}
 </script>
@@ -60,6 +61,7 @@ table {
 				</c:forEach>
 			</table>
 		</c:if>
+
 		<button type="button" class="btn btn-warning"
 			onclick="javascript:create()">게시글 등록</button>
 
