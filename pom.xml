@@ -145,7 +145,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.15</version>
+			<version>8.0.16</version>
 		</dependency>
 		<!-- JSON Converter(컨트롤러에서 전달한 VO데이터를 JSON으로 변경하기 위해 사용) -->
 		<dependency>
